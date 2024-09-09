@@ -1,5 +1,17 @@
 # BOOT.DEV - "Learn Python" - Function
 
+def question(num, title="", extra=""):
+    # Format num to always show two decimal places
+    formatted_num = f"{num:.2f}"
+    
+    if extra != "":
+        print(f"Chapter {formatted_num} - {extra} - {title}:")
+    else: 
+        print(f"Chapter {formatted_num} - {title}:")
+        
+def format():
+    print("\n")
+
 # 3.1 - Functions
 def area_of_circle(radius):
     pi = 3.14
