@@ -17,9 +17,9 @@ From Chapter 1 - 3 will offer solutions, however membership is required for Chap
 - [Ch 6. Computing](https://github.com/tdnk-td/python/blob/main/computing.py)
 - [Ch 7. Comparisons](https://github.com/tdnk-td/python/blob/main/comparisons.py)
 - [Ch 8. Loops](https://github.com/tdnk-td/python/blob/main/loops.py)
-- [Ch 9. Lists]
-- [Ch 10. Dictionaries]
-- [Ch 11. Sets]
-- [Ch 12. Errors]
-- [Ch 13. Challenges]
-- [Ch 14. Quiz]
+- [Ch 9. Lists](https://github.com/tdnk-td/python/blob/main/lists.py)
+- [Ch 10. Dictionaries](https://github.com/tdnk-td/python/blob/main/dictionaries.py)
+- [Ch 11. Sets](https://github.com/tdnk-td/python/blob/main/sets.py)
+- [Ch 12. Errors](https://github.com/tdnk-td/python/blob/main/errors.py)
+- [Ch 13. Challenges](https://github.com/tdnk-td/python/blob/main/challenges.py)
+- [Ch 14. Quiz](https://github.com/tdnk-td/python/blob/main/quiz.py)
