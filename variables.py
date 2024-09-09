@@ -1,4 +1,4 @@
-# BOOT.DEV - "Learn Python" - Variables
+# BOOT.DEV - "Learn Python" - Variables - CHAPTER 2
 
 def question(num, title="", extra=""):
     # Format num to always show two decimal places
