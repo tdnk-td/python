@@ -100,3 +100,29 @@ def calculate_guild_perms(glorfindel, galadriel, elendil, elrond):
 question(6.14, "Not")
 print("Q: The operators 'and', 'or', and 'not' are ___ operators?")
 print("A: Logical\n")
+
+# 6.98 - Damage Meter
+question(6.98, "[C1] Damage Meter")
+def main():
+    calculate_dps(8_000_000, 45)
+    calculate_dps(10_000_000, 49)
+
+
+# Don't edit below this line
+
+
+def calculate_dps(damage, time):
+    dps = damage / time
+    print(f"Damage per second: {dps}")
+    print("=====================================")
+
+
+main()
+format()
+
+# 6.99 - Converting Binary
+def binary_string_to_int(num_servers, num_players, num_admins):
+    num_servers = int(num_servers, 2)
+    num_players = int(num_players, 2)
+    num_admins = int(num_admins, 2)    
+    return num_servers, num_players, num_admins

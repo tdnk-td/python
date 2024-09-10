@@ -70,18 +70,18 @@ print("Q: What happens if you try to run code with invalid syntax?")
 print("A: You'll be provided a syntax error message and the code won't execute")
 format()
 
-# 1.C1 - Startup Bug
+# 1.97 - Startup Bug
 question(1.97, "[C1] Startup Bug")
 print("Starting up game server...")
 print("local game server is listening on port 8080")
 format()
 
-# 1.C2 - Game Statistics
+# 1.98 - Game Statistics
 question(1.98, "[C2] Game Statistics")
 print((250 + 241 + 244 + 255) / 4)
 format()
 
-# 1.C3 - Shop Response
+# 1.99 - Shop Response
 question(1.99, "[C3] Shop Response")
 print("Ah! Great choices...")
 print("Is there anything else I can help you with?")

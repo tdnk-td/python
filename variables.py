@@ -145,7 +145,7 @@ question(2.15, "Multi-Variable Declaration", 2.16)
 # A: Code that is easy for developers to read and understand
 format()
 
-# 2.C1 - Quest Output
+# 2.97 - Quest Output
 question(2.97, "[C1] Quest Output")
 quest_start = "You there! Adventurer!"
 quest_middle = "The local mine has been taken over by orcs!"
@@ -159,7 +159,7 @@ print(quest_middle)
 print(quest_end + space + quest_objective)
 format()
 
-# 2.C2 - Battleground Average
+# 2.98 - Battleground Average
 question(2.98, "[C2] Battleground Average")
 game_one_score = 97
 game_two_score = 91
@@ -184,7 +184,7 @@ game_seven_score) / 7
 print(round(average_score))
 format()
 
-# 2.C3 - Character Report
+# 2.99 - Character Report
 question(2.99, "[C3] Character Report")
 level = 25
 name = "Lopen"

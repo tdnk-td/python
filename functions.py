@@ -278,7 +278,7 @@ main()
 format()
 
 # 3.99 - Enchant and Attack
-question(3.99, "Enchant and Attack")
+question(3.99, "[C2] Enchant and Attack")
 def enchant_and_attack(target_health, damage, weapon):
     enchanted_damage = damage + 10
     new_health = target_health - enchanted_damage
