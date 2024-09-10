@@ -1,4 +1,4 @@
-# MAIN TESTING FOR 7.6
+# MAIN TESTING FOR 7.8
 import sys
 import os
 
@@ -8,26 +8,31 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from comparisons import *
 
 run_cases = [
-    (0, "dead"),
-    (4, "injured"),
+    ("ash ketchum", "ash ketchum", "brock", "high"),
+    ("brock", "ash ketchum", "brock", "low"),
 ]
 
 submit_cases = run_cases + [
-    (6, "healthy"),
-    (5, "injured"),
-    (1, "injured"),
-    (10, "healthy"),
-    (-1, "dead"),
+    ("misty", "brock", "ash ketchum", "neither"),
+    ("red", "red", "blue", "high"),
+    ("blue", "red", "blue", "low"),
+    ("green", "red", "blue", "neither"),
 ]
 
 
-def test(health, expected_status):
+def test(
+    player_name, high_scoring_player_name, low_scoring_player_name, expected_output
+):
     print("---------------------------------")
-    print(f"Health: {health}")
-    print(f"Expecting: {expected_status}")
-    result = player_status(health)
-    print(f"Result: {result}")
-    if result == expected_status:
+    print(
+        f"Player Name: {player_name}, High Scoring Player: {high_scoring_player_name}, Low Scoring Player: {low_scoring_player_name}"
+    )
+    print(f"Expecting: {expected_output}")
+    result = check_high_score(
+        player_name, high_scoring_player_name, low_scoring_player_name
+    )
+    print(f"Actual: {result}")
+    if result == expected_output:
         print("Pass")
         return True
     print("Fail")

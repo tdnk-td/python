@@ -1,4 +1,4 @@
-# MAIN TESTING FOR 7.6
+# MAIN TESTING FOR 7.C3
 import sys
 import os
 
@@ -8,26 +8,26 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from comparisons import *
 
 run_cases = [
-    (0, "dead"),
-    (4, "injured"),
+    (8, 50, 22, True),
+    (9, 100, 20, False),
 ]
 
 submit_cases = run_cases + [
-    (6, "healthy"),
-    (5, "injured"),
-    (1, "injured"),
-    (10, "healthy"),
-    (-1, "dead"),
+    (10, 50, 18, True),
+    (3, 105, 22, False),
+    (1, 1, 2, True),
+    (2, 1, 1, True),
+    (1, 2, 1, False),
 ]
 
 
-def test(health, expected_status):
+def test(input1, input2, input3, expected_output):
     print("---------------------------------")
-    print(f"Health: {health}")
-    print(f"Expecting: {expected_status}")
-    result = player_status(health)
-    print(f"Result: {result}")
-    if result == expected_status:
+    print(f"Inputs: {input1}, {input2}, {input3}")
+    print(f"Expecting: {expected_output}")
+    result = has_enough_energy(input1, input2, input3)
+    print(f"Actual: {result}")
+    if result == expected_output:
         print("Pass")
         return True
     print("Fail")

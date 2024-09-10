@@ -1,4 +1,4 @@
-# MAIN TESTING FOR 7.6
+# MAIN TESTING FOR 7.C1
 import sys
 import os
 
@@ -8,26 +8,26 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from comparisons import *
 
 run_cases = [
-    (0, "dead"),
-    (4, "injured"),
+    (3, 4, "no charges yet"),
+    (5, 2, "overtime charged"),
 ]
 
 submit_cases = run_cases + [
-    (6, "healthy"),
-    (5, "injured"),
-    (1, "injured"),
-    (10, "healthy"),
-    (-1, "dead"),
+    (2, 2, "overtime charged"),
+    (0, 1, "no charges yet"),
+    (1, 1, "overtime charged"),
+    (100, 2, "overtime charged"),
+    (2500, 3, "overtime charged"),
 ]
 
 
-def test(health, expected_status):
+def test(input1, input2, expected_output):
     print("---------------------------------")
-    print(f"Health: {health}")
-    print(f"Expecting: {expected_status}")
-    result = player_status(health)
-    print(f"Result: {result}")
-    if result == expected_status:
+    print(f"Inputs: {input1}, {input2}")
+    print(f"Expecting: {expected_output}")
+    result = check_mount_rental(input1, input2)
+    print(f"Actual: {result}")
+    if result == expected_output:
         print("Pass")
         return True
     print("Fail")

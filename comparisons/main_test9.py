@@ -1,4 +1,4 @@
-# MAIN TESTING FOR 7.6
+# MAIN TESTING FOR 7.11
 import sys
 import os
 
@@ -8,26 +8,31 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from comparisons import *
 
 run_cases = [
-    (0, "dead"),
-    (4, "injured"),
+    (22, False, 10, True),
+    (41, False, 1, False),
+    (14, False, 7, False),
 ]
 
 submit_cases = run_cases + [
-    (6, "healthy"),
-    (5, "injured"),
-    (1, "injured"),
-    (10, "healthy"),
-    (-1, "dead"),
+    (21, False, 5, True),
+    (107, False, 9, True),
+    (23, True, 5, False),
+    (21, False, 4, False),
+    (57, False, 11, False),
+    (20, False, 5, False),
 ]
 
 
-def test(health, expected_status):
+def test(input1, input2, input3, expected_output):
     print("---------------------------------")
-    print(f"Health: {health}")
-    print(f"Expecting: {expected_status}")
-    result = player_status(health)
-    print(f"Result: {result}")
-    if result == expected_status:
+    print(f"Inputs:")
+    print(f" * customer_age: {input1}")
+    print(f" * on_break: {input2}")
+    print(f" * time: {input3}")
+    print(f"Expecting: {expected_output}")
+    result = should_serve_customer(input1, input2, input3)
+    print(f"Actual: {result}")
+    if result == expected_output:
         print("Pass")
         return True
     print("Fail")

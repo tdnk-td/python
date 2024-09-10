@@ -54,3 +54,42 @@ def main():
 
 
 main()
+
+# 7.5 - If Practice
+def check_swords_for_army(number_of_swords, number_of_soldiers):
+    if (number_of_soldiers == number_of_swords):
+        return "correct amount"
+    else:
+        return "incorrect amount"
+    
+# 7.6 - If-Else
+def player_status(health):
+    if (health <= 0):
+        return "dead"
+    elif (health <= 5):
+        return "injured"
+    else:
+        return "healthy"
+    
+# 7.7 - If-Else Practice
+def check_high_score(current_player_name, high_scoring_player_name):
+    if current_player_name <= high_scoring_player_name:
+        return "You are the highest scoring player!"
+    else:
+        return "You are not the highest scoring player!"
+    
+# 7.8 - If-Else Practice
+def check_high_score(player_name, high_scoring_player_name, low_scoring_player_name):
+    if (player_name == high_scoring_player_name):
+        return "high"
+    elif (player_name == low_scoring_player_name):
+        return "low"
+    else:
+        return "neither"
+    
+# 7.9 - Boolean Logic
+def does_attack_hit(attack_roll, armor_class):
+        if (attack_roll != 1 and attack_roll >= armor_class or attack_roll == 20):
+            return True
+        else:
+            return False
