@@ -13,7 +13,7 @@ This repository contains my solutions to exercises & lessons from various Python
 - [Ch 5. Testing and Debugging](https://github.com/tdnk-td/python/blob/main/testing_debugging.py) ✔️
 - [Ch 6. Computing](https://github.com/tdnk-td/python/blob/main/computing.py) ✔️
 - [Ch 7. Comparisons](https://github.com/tdnk-td/python/blob/main/comparisons.py) ✔️
-- [Ch 8. Loops](https://github.com/tdnk-td/python/blob/main/loops.py)
+- [Ch 8. Loops](https://github.com/tdnk-td/python/blob/main/loops.py) ✔️
 - [Ch 9. Lists](https://github.com/tdnk-td/python/blob/main/lists.py)
 - [Ch 10. Dictionaries](https://github.com/tdnk-td/python/blob/main/dictionaries.py)
 - [Ch 11. Sets](https://github.com/tdnk-td/python/blob/main/sets.py)
