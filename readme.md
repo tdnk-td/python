@@ -3,10 +3,7 @@
 
 Using https://www.boot.dev/ to help me relearn & revise my Python knowledge
 
-I will be using the guest version and update my own submissions/work here, 
-as there is a certain point the guest version will not accept submissions
-
-From Chapter 1 - 3 will offer solutions, however membership is required for Chapters afterwards
+This repository contains my solutions to exercises & lessons from various Python courses offered by Boot.dev. It serves as a showcase of my proficiency, growth, and progress in Python programming. Each solution reflects my understanding of Python concepts and my ability to apply them effectively in practical scenarios.
 
 ## Table of Contents
 - [Ch 1. Introduction](https://github.com/tdnk-td/python/blob/main/introduction.py) ✔️

@@ -138,3 +138,94 @@ def regenerate(current_health, max_health, enemy_distance):
         if (enemy_distance <= 3):
             break
     return current_health
+
+# 8.95 - [C1] Match Countdown
+def countdown_to_start():
+    for i in range(10,1, -1):
+        print(f"{i}...")
+    print("1...Fight!")
+#        if(i == 1):
+#            print(f"{i}...Fight!")
+# Don't edit below this line
+
+
+def test():
+    print("Counting down to match start:")
+    countdown_to_start()
+    print("=====================================")
+
+
+def main():
+    test()
+
+
+main()
+
+# 8.96 - [C2] Critical Hit
+
+'''def calculate_flurry_crit(num_attacks, base_damage): 
+    critical_hit = base_damage * 2
+    total_damage = 0
+    for i in range (0, num_attacks+1):
+        total_damage += critical_hit
+        if(i == num_attacks+1):
+            total_damage += base_damage * 4
+            break
+    return total_damage'''
+    
+# above was my first take then revised to bottom
+
+def calculate_flurry_crit(num_attacks, base_damage):
+    critical_hit = base_damage * 2 # critical hits do double the base_damage!
+    total_damage = 0 
+    
+    for i in range(num_attacks):  # Loop for the number of attacks
+        
+        if (i == num_attacks - 1):  # If it's the last attack
+            total_damage += base_damage * 4  # Deal extra damage on the last attack
+        else:
+            total_damage += critical_hit  # Normal critical hit for each attack
+    
+    return total_damage
+
+# 8.97 - [C3] Experience Points
+def calculate_experience_points(level):
+    xp_next = 0
+    total_xp = 0
+    for i in range(level):
+        xp_next += 5
+        total_xp += xp_next - 5 # for some reason I had a hard time wrapping my head around this
+        
+    return total_xp
+
+# 8.98 - [C4] Random Events
+def is_prime(number):
+    if (number <= 1): # Prime numbers are greater than 1
+        return False 
+    
+    for i in range(2, number // 2 + 1):
+        if (number % i == 0): # If divisible by any number other than 1 or itself, it's not prime
+            return False 
+        
+    return True 
+
+# 8.99 - [C5] Meditate
+def meditate(mana, max_mana, energy, energy_potions):
+    if (energy == 0 and energy_potions > 0): # In case energy starts off as 0 and energy potions are available
+        energy += 50
+        energy_potions -= 1
+    
+    # Active Meditate
+    while (mana < max_mana) and (energy > 0 or energy_potions > 0): # Mana has to be lower than max, and energy is required
+        if (energy == 0 and energy_potions > 0): # When energy depletes, gain 50 energy, lose 1 energy potion
+            energy += 50
+            energy_potions -= 1
+        
+        if (energy > 0): # Gain mana if energy is available, and reduce energy by 1 per iteration
+            mana += 3
+            energy -= 1
+            
+        if (mana > max_mana): # If mana is going to go over, set to max_mana
+            mana = max_mana
+        
+    return mana, energy, energy_potions

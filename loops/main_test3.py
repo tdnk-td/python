@@ -1,4 +1,4 @@
-# MAIN TESTING FOR 8.8
+# MAIN TESTING FOR 8.10
 import sys
 import os
 

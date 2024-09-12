@@ -1,4 +1,4 @@
-# MAIN TESTING FOR 8.8
+# MAIN TESTING FOR 8.C2
 import sys
 import os
 
@@ -7,25 +7,28 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 from loops import *
 
-run_cases = [(0, 5, 10), (0, 10, 45), (10, 20, 145)]
+run_cases = [
+    (2, 5, 30),
+    (3, 15, 120),
+    (4, 30, 300),
+]
 
 submit_cases = run_cases + [
-    (1, 100, 4950),
-    (5, 50, 1215),
-    (20, 30, 245),
-    (50, 60, 545),
-    (100, 110, 1045),
+    (1, 0, 0),
+    (5, 50, 600),
+    (7, 105, 1680),
+    (10, 225, 4950),
+    (15, 525, 16800),
+    (20, 950, 39900),
 ]
 
 
 def test(input1, input2, expected_output):
     print("---------------------------------")
-    print(f"Inputs:")
-    print(f" * start: {input1}")
-    print(f" * end: {input2}")
-    print(f"Expecting: {expected_output}")
-    result = sum_of_numbers(input1, input2)
-    print(f"Actual: {result}")
+    print(f"Num attacks: {input1} Base damage: {input2}")
+    print(f"Expecting: {expected_output} damage")
+    result = calculate_flurry_crit(input1, input2)
+    print(f"Actual: {result} damage")
     if result == expected_output:
         print("Pass")
         return True

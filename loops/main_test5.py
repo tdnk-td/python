@@ -1,4 +1,4 @@
-# MAIN TESTING FOR 8.8
+# MAIN TESTING FOR 8.C3
 import sys
 import os
 
@@ -7,24 +7,27 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 from loops import *
 
-run_cases = [(0, 5, 10), (0, 10, 45), (10, 20, 145)]
+run_cases = [
+    (2, 5),
+    (3, 15),
+    (4, 30),
+]
 
 submit_cases = run_cases + [
-    (1, 100, 4950),
-    (5, 50, 1215),
-    (20, 30, 245),
-    (50, 60, 545),
-    (100, 110, 1045),
+    (1, 0),
+    (5, 50),
+    (7, 105),
+    (10, 225),
+    (15, 525),
+    (20, 950),
 ]
 
 
-def test(input1, input2, expected_output):
+def test(input1, expected_output):
     print("---------------------------------")
-    print(f"Inputs:")
-    print(f" * start: {input1}")
-    print(f" * end: {input2}")
+    print(f"Inputs: {input1}")
     print(f"Expecting: {expected_output}")
-    result = sum_of_numbers(input1, input2)
+    result = calculate_experience_points(input1)
     print(f"Actual: {result}")
     if result == expected_output:
         print("Pass")
