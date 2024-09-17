@@ -183,6 +183,7 @@ def main():
 
 
 main()
+format()
 
 # 9.15 - Find Max
 def find_max(nums):
@@ -245,3 +246,45 @@ def trim_strongholds(strongholds):
     return strongholds
 
 # 9.21 - Tuples
+question(9.21, "Tuples")
+def get_heroes():
+    heroes = [
+        ("Glorfindel",
+        2093,
+        True),
+        ("Gandalf",
+        1054,
+        False),
+        ("Gimli",
+        389,
+        False),
+        ("Aragorn",
+        87,
+        False)
+    ]
+
+    return heroes
+
+
+# Don't touch below this line
+
+
+def test():
+    heroes = get_heroes()
+    for hero in heroes:
+        print(f"name: {hero[0]}, age: {hero[1]}, is_elf: {hero[2]}")
+
+
+def main():
+    test()
+
+
+main()
+format()
+
+# 9.22 - First Element
+def get_first_item(items):
+    if not items: # If the list is empty
+        return "ERROR"
+    else:
+        return items[0]

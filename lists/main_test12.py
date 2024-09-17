@@ -8,86 +8,27 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from lists import *
 
 run_cases = [
-    (
-        [
-            "Rivendale",
-            "The Morgoth Mountains",
-            "The Lonely Island",
-            "Mordia",
-            "Mordane",
-            "Gondolin",
-        ],
-        [
-            "The Morgoth Mountains",
-            "The Lonely Island",
-            "Mordia",
-        ],
-    ),
+    ([1, 2], 1),
+    (["Healing Potion"], "Healing Potion"),
+    ([], "ERROR"),
 ]
 
 submit_cases = run_cases + [
-    (
-        [
-            "Pogsmeade",
-            "Dogwarts",
-            "The Leaky Pot",
-            "The Screaming Hut",
-        ],
-        [
-            "Dogwarts",
-        ],
-    ),
-    (
-        [
-            "Midgard",
-            "Cosmo Canyon",
-            "Nibelheim",
-            "Costa del Sol",
-            "Pallet Town",
-            "Viridian City",
-            "Salamandastron",
-            "Redwall Abbey",
-            "Fisherman's Horizon",
-            "Waterdeep",
-            "Elturel",
-            "Candlekeep",
-            "Chult",
-            "Eorzea",
-            "Ratchet",
-            "Orgrimmar",
-            "Stormwind",
-            "Shattrath",
-            "Dalaran",
-        ],
-        [
-            "Cosmo Canyon",
-            "Nibelheim",
-            "Costa del Sol",
-            "Pallet Town",
-            "Viridian City",
-            "Salamandastron",
-            "Redwall Abbey",
-            "Fisherman's Horizon",
-            "Waterdeep",
-            "Elturel",
-            "Candlekeep",
-            "Chult",
-            "Eorzea",
-            "Ratchet",
-            "Orgrimmar",
-            "Stormwind",
-        ],
-    ),
+    (["Iron Ore", "Iron Bar", "Scimitar"], "Iron Ore"),
+    (["Apple", "Banana", "Cherry"], "Apple"),
+    ([[1, 2, 3], [4, 5, 6], [7, 8, 9]], [1, 2, 3]),
+    ([False, True, False], False),
+    ([None, "None", 0], None),
 ]
 
 
 def test(input1, expected_output):
     print("---------------------------------")
-    print(f"    Input: {input1}")
+    print(f"Input: {input1}")
     print(f"Expecting: {expected_output}")
-    trim_strongholds(input1)
-    print(f"   Actual: {input1}")
-    if input1 == expected_output:
+    result = get_first_item(input1)
+    print(f"Actual: {result}")
+    if result == expected_output:
         print("Pass")
         return True
     print("Fail")
