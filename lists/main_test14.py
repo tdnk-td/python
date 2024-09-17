@@ -1,4 +1,4 @@
-# MAIN TESTING FOR 9.22
+# MAIN TESTING FOR 9.23
 import sys
 import os
 
@@ -8,26 +8,31 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 from lists import *
 
 run_cases = [
-    ([1, 2], 1),
-    (["Healing Potion"], "Healing Potion"),
-    ([], "ERROR"),
+    (
+        ["Shortsword", "Healing Potion", "Iron Breastplate", "Kite Shield"],
+        ["Kite Shield", "Iron Breastplate", "Healing Potion", "Shortsword"],
+    ),
+    ([1, 2, 300, 4, 5], [5, 4, 300, 2, 1]),
 ]
 
 submit_cases = run_cases + [
-    (["Iron Ore", "Iron Bar", "Scimitar"], "Iron Ore"),
-    (["Apple", "Banana", "Cherry"], "Apple"),
-    ([[1, 2, 3], [4, 5, 6], [7, 8, 9]], [1, 2, 3]),
-    ([False, True, False], False),
-    ([None, "None", 0], None),
+    ([], []),
+    (["a"], ["a"]),
+    ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]),
+    (
+        ["apple", "banana", "cherry", "date", "elderberry"],
+        ["elderberry", "date", "cherry", "banana", "apple"],
+    ),
+    (["hello", "world"], ["world", "hello"]),
 ]
 
 
-def test(input1, expected_output):
+def test(input, expected_output):
     print("---------------------------------")
-    print(f"Input: {input1}")
-    print(f"Expecting: {expected_output}")
-    result = get_first_item(input1)
-    print(f"Actual: {result}")
+    print(f"Input array: {input}")
+    print(f"Expected reversed array: {expected_output}")
+    result = reverse_array(input)
+    print(f"Actual reversed array: {result}")
     if result == expected_output:
         print("Pass")
         return True

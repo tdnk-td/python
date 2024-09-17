@@ -288,3 +288,7 @@ def get_first_item(items):
         return "ERROR"
     else:
         return items[0]
+    
+# 9.23 - Reverse List
+def reverse_array(items):
+    return items[::-1] # Reverses the list
