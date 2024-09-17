@@ -243,3 +243,5 @@ def trim_strongholds(strongholds):
     del strongholds[0]
     del strongholds[-2:] # Last 2 items
     return strongholds
+
+# 9.21 - Tuples
