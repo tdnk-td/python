@@ -200,9 +200,46 @@ def get_odd_numbers(num):
 
     for i in range(0, num):
         # don't touch above this line
-        if (i % 2 != 0):
+        if (i % 2 != 0): # If the remainder of i divided by 2 is not equal to 0
             odd_numbers.append(i)
             
     # don't touch below this line
 
     return odd_numbers
+
+# 9.17 - Slicing list
+def get_champion_slices(champions):
+    value1 = champions[2:] # From index 3 to the end
+    value2 = champions[:-2] # From the beginning to index -3
+    value3 = champions[::2] # From the beginning to the end, in steps of 2
+    return value1, value2, value3
+
+# 9.18 - List Operations - Concatenate
+def concatenate_favorites(favorite_weapons, favorite_armor, favorite_items):
+    favorites = favorite_weapons + favorite_armor + favorite_items
+    return favorites
+
+# 9.19 - List Operations - Contains
+def is_top_weapon(weapon):
+    top_weapons = [
+        "sword of justice",
+        "sword of slashing",
+        "stabby daggy",
+        "great axe",
+        "silver bow",
+        "spellbook",
+        "spiked knuckles",
+    ]
+
+    # don't touch above this line
+
+    if (weapon in top_weapons):
+        return True
+    else:
+        return False
+    
+# 9.20 - List Deletion
+def trim_strongholds(strongholds):
+    del strongholds[0]
+    del strongholds[-2:] # Last 2 items
+    return strongholds
