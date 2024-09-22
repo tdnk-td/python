@@ -316,3 +316,18 @@ def filter_messages(messages):
         words_removed_counts.append(bad_word_count)  # Append the count of removed words
 
     return filtered_messages, words_removed_counts
+
+# 9.25 - Evens and Odds
+def get_odds_and_evens(numbers):
+    num_odds = 0
+    num_evens = 0
+
+    # Don't touch above this line
+
+    for number in numbers:
+        if number % 2 == 0: # If the number is even
+            num_evens += 1
+        else:
+            num_odds += 1
+            
+    return num_odds, num_evens
