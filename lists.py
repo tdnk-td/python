@@ -292,3 +292,27 @@ def get_first_item(items):
 # 9.23 - Reverse List
 def reverse_array(items):
     return items[::-1] # Reverses the list
+
+# 9.24 - Filter Messages
+def filter_messages(messages):
+    # Create the two empty lists to return at the end
+    filtered_messages = []
+    words_removed_counts = []
+
+    # Iterate over each message in the input list
+    for message in messages:
+        words = message.split()  # Split the message into words
+        not_bad_word = []  # Create a new list for non-bad words
+        bad_word_count = 0  # Counter for removed words
+
+        for word in words:
+            if word == "dang":  
+                bad_word_count += 1
+            else:
+                not_bad_word.append(word)  # If not 'dang', add to non-bad words list
+
+        clean_message = " ".join(not_bad_word)
+        filtered_messages.append(clean_message)  # Append the clean message to the filtered list
+        words_removed_counts.append(bad_word_count)  # Append the count of removed words
+
+    return filtered_messages, words_removed_counts
