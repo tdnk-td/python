@@ -317,7 +317,7 @@ def filter_messages(messages):
 
     return filtered_messages, words_removed_counts
 
-# 9.25 - Evens and Odds
+# 9.94 - [C1] Evens and Odds
 def get_odds_and_evens(numbers):
     num_odds = 0
     num_evens = 0
@@ -331,3 +331,10 @@ def get_odds_and_evens(numbers):
             num_odds += 1
             
     return num_odds, num_evens
+
+# 9.95 - [C2] Even Teams
+def split_players_into_teams(players):
+    even_team = players[::2] # From the beginning to the end, in steps of 2 -> [0, 2, 4, ...]
+    odd_team = players[1::2] # From index 1 to the end, in steps of 2 -> [1, 3, 5, ...]
+        
+    return even_team, odd_team
