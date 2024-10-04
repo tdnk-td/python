@@ -338,3 +338,21 @@ def split_players_into_teams(players):
     odd_team = players[1::2] # From index 1 to the end, in steps of 2 -> [1, 3, 5, ...]
         
     return even_team, odd_team
+
+# 9.95 - [C3] Alchemy Ingredients
+def check_ingredient_match(recipe, gathered_ingredients):
+    correct_ingredients = 0
+    missing_ingredients = []
+
+    # Iterate through the recipe and check if the ingredient matches
+    for i, ingredient in enumerate(recipe):
+        if i < len(gathered_ingredients) and ingredient == gathered_ingredients[i]:
+            correct_ingredients += 1
+        else:
+            # If the ingredient doesn't match, add it to the missing_ingredients list
+            missing_ingredients.append(ingredient)
+    
+    # Calculate the percentage of correct ingredients
+    percentage = (correct_ingredients / len(recipe)) * 100
+
+    return round(percentage, 2), missing_ingredients
