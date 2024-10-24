@@ -356,3 +356,18 @@ def check_ingredient_match(recipe, gathered_ingredients):
     percentage = (correct_ingredients / len(recipe)) * 100
 
     return round(percentage, 2), missing_ingredients
+
+# 9.96 - [C4] Character Levels
+def validate_path(expected_path, character_path):
+    # Extract the character name and actual path
+    character_name = character_path[0]
+    actual_path = character_path[1:]
+    
+    # Count the number of steps that match the expected path
+    correct_steps = sum(1 for expected, actual in zip(expected_path, actual_path) if expected == actual)
+    
+    # Calculate the percentage of correct steps
+    percentage = (correct_steps / len(expected_path)) * 100
+    
+    return character_name, round(percentage, 2)
+    
